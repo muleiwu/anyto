@@ -9,7 +9,7 @@ import (
 )
 
 // Bool converts the value to *bool, returning nil on error.
-func (a AnyPointer) Bool() *bool {
+func (a *anyPointer) Bool() *bool {
 	v, err := cast.ToBoolE(a.v)
 	if err != nil {
 		return nil
@@ -18,7 +18,7 @@ func (a AnyPointer) Bool() *bool {
 }
 
 // String converts the value to *string, returning nil on error.
-func (a AnyPointer) String() *string {
+func (a *anyPointer) String() *string {
 	v, err := cast.ToStringE(a.v)
 	if err != nil {
 		return nil
@@ -27,7 +27,7 @@ func (a AnyPointer) String() *string {
 }
 
 // Int converts the value to *int, returning nil on error.
-func (a AnyPointer) Int() *int {
+func (a *anyPointer) Int() *int {
 	v, err := cast.ToIntE(a.v)
 	if err != nil {
 		return nil
@@ -36,7 +36,7 @@ func (a AnyPointer) Int() *int {
 }
 
 // Int8 converts the value to *int8, returning nil on error.
-func (a AnyPointer) Int8() *int8 {
+func (a *anyPointer) Int8() *int8 {
 	v, err := cast.ToInt8E(a.v)
 	if err != nil {
 		return nil
@@ -45,7 +45,7 @@ func (a AnyPointer) Int8() *int8 {
 }
 
 // Int16 converts the value to *int16, returning nil on error.
-func (a AnyPointer) Int16() *int16 {
+func (a *anyPointer) Int16() *int16 {
 	v, err := cast.ToInt16E(a.v)
 	if err != nil {
 		return nil
@@ -54,7 +54,7 @@ func (a AnyPointer) Int16() *int16 {
 }
 
 // Int32 converts the value to *int32, returning nil on error.
-func (a AnyPointer) Int32() *int32 {
+func (a *anyPointer) Int32() *int32 {
 	v, err := cast.ToInt32E(a.v)
 	if err != nil {
 		return nil
@@ -63,7 +63,7 @@ func (a AnyPointer) Int32() *int32 {
 }
 
 // Int64 converts the value to *int64, returning nil on error.
-func (a AnyPointer) Int64() *int64 {
+func (a *anyPointer) Int64() *int64 {
 	v, err := cast.ToInt64E(a.v)
 	if err != nil {
 		return nil
@@ -72,7 +72,7 @@ func (a AnyPointer) Int64() *int64 {
 }
 
 // Uint converts the value to *uint, returning nil on error.
-func (a AnyPointer) Uint() *uint {
+func (a *anyPointer) Uint() *uint {
 	v, err := cast.ToUintE(a.v)
 	if err != nil {
 		return nil
@@ -81,7 +81,7 @@ func (a AnyPointer) Uint() *uint {
 }
 
 // Uint8 converts the value to *uint8, returning nil on error.
-func (a AnyPointer) Uint8() *uint8 {
+func (a *anyPointer) Uint8() *uint8 {
 	v, err := cast.ToUint8E(a.v)
 	if err != nil {
 		return nil
@@ -90,7 +90,7 @@ func (a AnyPointer) Uint8() *uint8 {
 }
 
 // Uint16 converts the value to *uint16, returning nil on error.
-func (a AnyPointer) Uint16() *uint16 {
+func (a *anyPointer) Uint16() *uint16 {
 	v, err := cast.ToUint16E(a.v)
 	if err != nil {
 		return nil
@@ -99,7 +99,7 @@ func (a AnyPointer) Uint16() *uint16 {
 }
 
 // Uint32 converts the value to *uint32, returning nil on error.
-func (a AnyPointer) Uint32() *uint32 {
+func (a *anyPointer) Uint32() *uint32 {
 	v, err := cast.ToUint32E(a.v)
 	if err != nil {
 		return nil
@@ -108,7 +108,7 @@ func (a AnyPointer) Uint32() *uint32 {
 }
 
 // Uint64 converts the value to *uint64, returning nil on error.
-func (a AnyPointer) Uint64() *uint64 {
+func (a *anyPointer) Uint64() *uint64 {
 	v, err := cast.ToUint64E(a.v)
 	if err != nil {
 		return nil
@@ -117,7 +117,7 @@ func (a AnyPointer) Uint64() *uint64 {
 }
 
 // Float32 converts the value to *float32, returning nil on error.
-func (a AnyPointer) Float32() *float32 {
+func (a *anyPointer) Float32() *float32 {
 	v, err := cast.ToFloat32E(a.v)
 	if err != nil {
 		return nil
@@ -126,7 +126,7 @@ func (a AnyPointer) Float32() *float32 {
 }
 
 // Float64 converts the value to *float64, returning nil on error.
-func (a AnyPointer) Float64() *float64 {
+func (a *anyPointer) Float64() *float64 {
 	v, err := cast.ToFloat64E(a.v)
 	if err != nil {
 		return nil
@@ -135,7 +135,7 @@ func (a AnyPointer) Float64() *float64 {
 }
 
 // Time converts the value to *time.Time, returning nil on error.
-func (a AnyPointer) Time() *time.Time {
+func (a *anyPointer) Time() *time.Time {
 	v, err := cast.ToTimeE(a.v)
 	if err != nil {
 		return nil
@@ -144,7 +144,7 @@ func (a AnyPointer) Time() *time.Time {
 }
 
 // Duration converts the value to *time.Duration, returning nil on error.
-func (a AnyPointer) Duration() *time.Duration {
+func (a *anyPointer) Duration() *time.Duration {
 	v, err := cast.ToDurationE(a.v)
 	if err != nil {
 		return nil
@@ -153,7 +153,7 @@ func (a AnyPointer) Duration() *time.Duration {
 }
 
 // Slice converts the value to *[]any, returning nil on error.
-func (a AnyPointer) Slice() *[]any {
+func (a *anyPointer) Slice() *[]any {
 	v, err := cast.ToSliceE(a.v)
 	if err != nil {
 		return nil
@@ -162,7 +162,7 @@ func (a AnyPointer) Slice() *[]any {
 }
 
 // BoolSlice converts the value to *[]bool, returning nil on error.
-func (a AnyPointer) BoolSlice() *[]bool {
+func (a *anyPointer) BoolSlice() *[]bool {
 	v, err := cast.ToBoolSliceE(a.v)
 	if err != nil {
 		return nil
@@ -171,7 +171,7 @@ func (a AnyPointer) BoolSlice() *[]bool {
 }
 
 // StringSlice converts the value to *[]string, returning nil on error.
-func (a AnyPointer) StringSlice() *[]string {
+func (a *anyPointer) StringSlice() *[]string {
 	v, err := cast.ToStringSliceE(a.v)
 	if err != nil {
 		return nil
@@ -180,7 +180,7 @@ func (a AnyPointer) StringSlice() *[]string {
 }
 
 // IntSlice converts the value to *[]int, returning nil on error.
-func (a AnyPointer) IntSlice() *[]int {
+func (a *anyPointer) IntSlice() *[]int {
 	v, err := cast.ToIntSliceE(a.v)
 	if err != nil {
 		return nil
@@ -189,7 +189,7 @@ func (a AnyPointer) IntSlice() *[]int {
 }
 
 // Int8Slice converts the value to *[]int8, returning nil on error.
-func (a AnyPointer) Int8Slice() *[]int8 {
+func (a *anyPointer) Int8Slice() *[]int8 {
 	v, err := cast.ToInt8SliceE(a.v)
 	if err != nil {
 		return nil
@@ -198,7 +198,7 @@ func (a AnyPointer) Int8Slice() *[]int8 {
 }
 
 // Int16Slice converts the value to *[]int16, returning nil on error.
-func (a AnyPointer) Int16Slice() *[]int16 {
+func (a *anyPointer) Int16Slice() *[]int16 {
 	v, err := cast.ToInt16SliceE(a.v)
 	if err != nil {
 		return nil
@@ -207,7 +207,7 @@ func (a AnyPointer) Int16Slice() *[]int16 {
 }
 
 // Int32Slice converts the value to *[]int32, returning nil on error.
-func (a AnyPointer) Int32Slice() *[]int32 {
+func (a *anyPointer) Int32Slice() *[]int32 {
 	v, err := cast.ToInt32SliceE(a.v)
 	if err != nil {
 		return nil
@@ -216,7 +216,7 @@ func (a AnyPointer) Int32Slice() *[]int32 {
 }
 
 // Int64Slice converts the value to *[]int64, returning nil on error.
-func (a AnyPointer) Int64Slice() *[]int64 {
+func (a *anyPointer) Int64Slice() *[]int64 {
 	v, err := cast.ToInt64SliceE(a.v)
 	if err != nil {
 		return nil
@@ -225,7 +225,7 @@ func (a AnyPointer) Int64Slice() *[]int64 {
 }
 
 // UintSlice converts the value to *[]uint, returning nil on error.
-func (a AnyPointer) UintSlice() *[]uint {
+func (a *anyPointer) UintSlice() *[]uint {
 	v, err := cast.ToUintSliceE(a.v)
 	if err != nil {
 		return nil
@@ -234,7 +234,7 @@ func (a AnyPointer) UintSlice() *[]uint {
 }
 
 // Uint8Slice converts the value to *[]uint8, returning nil on error.
-func (a AnyPointer) Uint8Slice() *[]uint8 {
+func (a *anyPointer) Uint8Slice() *[]uint8 {
 	v, err := cast.ToUint8SliceE(a.v)
 	if err != nil {
 		return nil
@@ -243,7 +243,7 @@ func (a AnyPointer) Uint8Slice() *[]uint8 {
 }
 
 // Uint16Slice converts the value to *[]uint16, returning nil on error.
-func (a AnyPointer) Uint16Slice() *[]uint16 {
+func (a *anyPointer) Uint16Slice() *[]uint16 {
 	v, err := cast.ToUint16SliceE(a.v)
 	if err != nil {
 		return nil
@@ -252,7 +252,7 @@ func (a AnyPointer) Uint16Slice() *[]uint16 {
 }
 
 // Uint32Slice converts the value to *[]uint32, returning nil on error.
-func (a AnyPointer) Uint32Slice() *[]uint32 {
+func (a *anyPointer) Uint32Slice() *[]uint32 {
 	v, err := cast.ToUint32SliceE(a.v)
 	if err != nil {
 		return nil
@@ -261,7 +261,7 @@ func (a AnyPointer) Uint32Slice() *[]uint32 {
 }
 
 // Uint64Slice converts the value to *[]uint64, returning nil on error.
-func (a AnyPointer) Uint64Slice() *[]uint64 {
+func (a *anyPointer) Uint64Slice() *[]uint64 {
 	v, err := cast.ToUint64SliceE(a.v)
 	if err != nil {
 		return nil
@@ -270,7 +270,7 @@ func (a AnyPointer) Uint64Slice() *[]uint64 {
 }
 
 // Float32Slice converts the value to *[]float32, returning nil on error.
-func (a AnyPointer) Float32Slice() *[]float32 {
+func (a *anyPointer) Float32Slice() *[]float32 {
 	v, err := cast.ToFloat32SliceE(a.v)
 	if err != nil {
 		return nil
@@ -279,7 +279,7 @@ func (a AnyPointer) Float32Slice() *[]float32 {
 }
 
 // Float64Slice converts the value to *[]float64, returning nil on error.
-func (a AnyPointer) Float64Slice() *[]float64 {
+func (a *anyPointer) Float64Slice() *[]float64 {
 	v, err := cast.ToFloat64SliceE(a.v)
 	if err != nil {
 		return nil
@@ -288,7 +288,7 @@ func (a AnyPointer) Float64Slice() *[]float64 {
 }
 
 // DurationSlice converts the value to *[]time.Duration, returning nil on error.
-func (a AnyPointer) DurationSlice() *[]time.Duration {
+func (a *anyPointer) DurationSlice() *[]time.Duration {
 	v, err := cast.ToDurationSliceE(a.v)
 	if err != nil {
 		return nil
@@ -297,7 +297,7 @@ func (a AnyPointer) DurationSlice() *[]time.Duration {
 }
 
 // StringMap converts the value to *map[string]any, returning nil on error.
-func (a AnyPointer) StringMap() *map[string]any {
+func (a *anyPointer) StringMap() *map[string]any {
 	v, err := cast.ToStringMapE(a.v)
 	if err != nil {
 		return nil
@@ -306,7 +306,7 @@ func (a AnyPointer) StringMap() *map[string]any {
 }
 
 // StringMapString converts the value to *map[string]string, returning nil on error.
-func (a AnyPointer) StringMapString() *map[string]string {
+func (a *anyPointer) StringMapString() *map[string]string {
 	v, err := cast.ToStringMapStringE(a.v)
 	if err != nil {
 		return nil
@@ -315,7 +315,7 @@ func (a AnyPointer) StringMapString() *map[string]string {
 }
 
 // StringMapStringSlice converts the value to *map[string][]string, returning nil on error.
-func (a AnyPointer) StringMapStringSlice() *map[string][]string {
+func (a *anyPointer) StringMapStringSlice() *map[string][]string {
 	v, err := cast.ToStringMapStringSliceE(a.v)
 	if err != nil {
 		return nil
@@ -324,7 +324,7 @@ func (a AnyPointer) StringMapStringSlice() *map[string][]string {
 }
 
 // StringMapBool converts the value to *map[string]bool, returning nil on error.
-func (a AnyPointer) StringMapBool() *map[string]bool {
+func (a *anyPointer) StringMapBool() *map[string]bool {
 	v, err := cast.ToStringMapBoolE(a.v)
 	if err != nil {
 		return nil
@@ -333,7 +333,7 @@ func (a AnyPointer) StringMapBool() *map[string]bool {
 }
 
 // StringMapInt converts the value to *map[string]int, returning nil on error.
-func (a AnyPointer) StringMapInt() *map[string]int {
+func (a *anyPointer) StringMapInt() *map[string]int {
 	v, err := cast.ToStringMapIntE(a.v)
 	if err != nil {
 		return nil
@@ -342,7 +342,7 @@ func (a AnyPointer) StringMapInt() *map[string]int {
 }
 
 // StringMapInt64 converts the value to *map[string]int64, returning nil on error.
-func (a AnyPointer) StringMapInt64() *map[string]int64 {
+func (a *anyPointer) StringMapInt64() *map[string]int64 {
 	v, err := cast.ToStringMapInt64E(a.v)
 	if err != nil {
 		return nil

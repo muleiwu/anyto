@@ -9,191 +9,191 @@ import (
 )
 
 // Bool converts the value to bool, returning an error on failure.
-func (a AnyValueE) Bool() (bool, error) {
+func (a *anyValueE) Bool() (bool, error) {
 	return cast.ToBoolE(a.v)
 }
 
 // String converts the value to string, returning an error on failure.
-func (a AnyValueE) String() (string, error) {
+func (a *anyValueE) String() (string, error) {
 	return cast.ToStringE(a.v)
 }
 
 // Int converts the value to int, returning an error on failure.
-func (a AnyValueE) Int() (int, error) {
+func (a *anyValueE) Int() (int, error) {
 	return cast.ToIntE(a.v)
 }
 
 // Int8 converts the value to int8, returning an error on failure.
-func (a AnyValueE) Int8() (int8, error) {
+func (a *anyValueE) Int8() (int8, error) {
 	return cast.ToInt8E(a.v)
 }
 
 // Int16 converts the value to int16, returning an error on failure.
-func (a AnyValueE) Int16() (int16, error) {
+func (a *anyValueE) Int16() (int16, error) {
 	return cast.ToInt16E(a.v)
 }
 
 // Int32 converts the value to int32, returning an error on failure.
-func (a AnyValueE) Int32() (int32, error) {
+func (a *anyValueE) Int32() (int32, error) {
 	return cast.ToInt32E(a.v)
 }
 
 // Int64 converts the value to int64, returning an error on failure.
-func (a AnyValueE) Int64() (int64, error) {
+func (a *anyValueE) Int64() (int64, error) {
 	return cast.ToInt64E(a.v)
 }
 
 // Uint converts the value to uint, returning an error on failure.
-func (a AnyValueE) Uint() (uint, error) {
+func (a *anyValueE) Uint() (uint, error) {
 	return cast.ToUintE(a.v)
 }
 
 // Uint8 converts the value to uint8, returning an error on failure.
-func (a AnyValueE) Uint8() (uint8, error) {
+func (a *anyValueE) Uint8() (uint8, error) {
 	return cast.ToUint8E(a.v)
 }
 
 // Uint16 converts the value to uint16, returning an error on failure.
-func (a AnyValueE) Uint16() (uint16, error) {
+func (a *anyValueE) Uint16() (uint16, error) {
 	return cast.ToUint16E(a.v)
 }
 
 // Uint32 converts the value to uint32, returning an error on failure.
-func (a AnyValueE) Uint32() (uint32, error) {
+func (a *anyValueE) Uint32() (uint32, error) {
 	return cast.ToUint32E(a.v)
 }
 
 // Uint64 converts the value to uint64, returning an error on failure.
-func (a AnyValueE) Uint64() (uint64, error) {
+func (a *anyValueE) Uint64() (uint64, error) {
 	return cast.ToUint64E(a.v)
 }
 
 // Float32 converts the value to float32, returning an error on failure.
-func (a AnyValueE) Float32() (float32, error) {
+func (a *anyValueE) Float32() (float32, error) {
 	return cast.ToFloat32E(a.v)
 }
 
 // Float64 converts the value to float64, returning an error on failure.
-func (a AnyValueE) Float64() (float64, error) {
+func (a *anyValueE) Float64() (float64, error) {
 	return cast.ToFloat64E(a.v)
 }
 
 // Time converts the value to time.Time, returning an error on failure.
-func (a AnyValueE) Time() (time.Time, error) {
+func (a *anyValueE) Time() (time.Time, error) {
 	return cast.ToTimeE(a.v)
 }
 
 // Duration converts the value to time.Duration, returning an error on failure.
-func (a AnyValueE) Duration() (time.Duration, error) {
+func (a *anyValueE) Duration() (time.Duration, error) {
 	return cast.ToDurationE(a.v)
 }
 
 // Slice converts the value to []any, returning an error on failure.
-func (a AnyValueE) Slice() ([]any, error) {
+func (a *anyValueE) Slice() ([]any, error) {
 	return cast.ToSliceE(a.v)
 }
 
 // BoolSlice converts the value to []bool, returning an error on failure.
-func (a AnyValueE) BoolSlice() ([]bool, error) {
+func (a *anyValueE) BoolSlice() ([]bool, error) {
 	return cast.ToBoolSliceE(a.v)
 }
 
 // StringSlice converts the value to []string, returning an error on failure.
-func (a AnyValueE) StringSlice() ([]string, error) {
+func (a *anyValueE) StringSlice() ([]string, error) {
 	return cast.ToStringSliceE(a.v)
 }
 
 // IntSlice converts the value to []int, returning an error on failure.
-func (a AnyValueE) IntSlice() ([]int, error) {
+func (a *anyValueE) IntSlice() ([]int, error) {
 	return cast.ToIntSliceE(a.v)
 }
 
 // Int8Slice converts the value to []int8, returning an error on failure.
-func (a AnyValueE) Int8Slice() ([]int8, error) {
+func (a *anyValueE) Int8Slice() ([]int8, error) {
 	return cast.ToInt8SliceE(a.v)
 }
 
 // Int16Slice converts the value to []int16, returning an error on failure.
-func (a AnyValueE) Int16Slice() ([]int16, error) {
+func (a *anyValueE) Int16Slice() ([]int16, error) {
 	return cast.ToInt16SliceE(a.v)
 }
 
 // Int32Slice converts the value to []int32, returning an error on failure.
-func (a AnyValueE) Int32Slice() ([]int32, error) {
+func (a *anyValueE) Int32Slice() ([]int32, error) {
 	return cast.ToInt32SliceE(a.v)
 }
 
 // Int64Slice converts the value to []int64, returning an error on failure.
-func (a AnyValueE) Int64Slice() ([]int64, error) {
+func (a *anyValueE) Int64Slice() ([]int64, error) {
 	return cast.ToInt64SliceE(a.v)
 }
 
 // UintSlice converts the value to []uint, returning an error on failure.
-func (a AnyValueE) UintSlice() ([]uint, error) {
+func (a *anyValueE) UintSlice() ([]uint, error) {
 	return cast.ToUintSliceE(a.v)
 }
 
 // Uint8Slice converts the value to []uint8, returning an error on failure.
-func (a AnyValueE) Uint8Slice() ([]uint8, error) {
+func (a *anyValueE) Uint8Slice() ([]uint8, error) {
 	return cast.ToUint8SliceE(a.v)
 }
 
 // Uint16Slice converts the value to []uint16, returning an error on failure.
-func (a AnyValueE) Uint16Slice() ([]uint16, error) {
+func (a *anyValueE) Uint16Slice() ([]uint16, error) {
 	return cast.ToUint16SliceE(a.v)
 }
 
 // Uint32Slice converts the value to []uint32, returning an error on failure.
-func (a AnyValueE) Uint32Slice() ([]uint32, error) {
+func (a *anyValueE) Uint32Slice() ([]uint32, error) {
 	return cast.ToUint32SliceE(a.v)
 }
 
 // Uint64Slice converts the value to []uint64, returning an error on failure.
-func (a AnyValueE) Uint64Slice() ([]uint64, error) {
+func (a *anyValueE) Uint64Slice() ([]uint64, error) {
 	return cast.ToUint64SliceE(a.v)
 }
 
 // Float32Slice converts the value to []float32, returning an error on failure.
-func (a AnyValueE) Float32Slice() ([]float32, error) {
+func (a *anyValueE) Float32Slice() ([]float32, error) {
 	return cast.ToFloat32SliceE(a.v)
 }
 
 // Float64Slice converts the value to []float64, returning an error on failure.
-func (a AnyValueE) Float64Slice() ([]float64, error) {
+func (a *anyValueE) Float64Slice() ([]float64, error) {
 	return cast.ToFloat64SliceE(a.v)
 }
 
 // DurationSlice converts the value to []time.Duration, returning an error on failure.
-func (a AnyValueE) DurationSlice() ([]time.Duration, error) {
+func (a *anyValueE) DurationSlice() ([]time.Duration, error) {
 	return cast.ToDurationSliceE(a.v)
 }
 
 // StringMap converts the value to map[string]any, returning an error on failure.
-func (a AnyValueE) StringMap() (map[string]any, error) {
+func (a *anyValueE) StringMap() (map[string]any, error) {
 	return cast.ToStringMapE(a.v)
 }
 
 // StringMapString converts the value to map[string]string, returning an error on failure.
-func (a AnyValueE) StringMapString() (map[string]string, error) {
+func (a *anyValueE) StringMapString() (map[string]string, error) {
 	return cast.ToStringMapStringE(a.v)
 }
 
 // StringMapStringSlice converts the value to map[string][]string, returning an error on failure.
-func (a AnyValueE) StringMapStringSlice() (map[string][]string, error) {
+func (a *anyValueE) StringMapStringSlice() (map[string][]string, error) {
 	return cast.ToStringMapStringSliceE(a.v)
 }
 
 // StringMapBool converts the value to map[string]bool, returning an error on failure.
-func (a AnyValueE) StringMapBool() (map[string]bool, error) {
+func (a *anyValueE) StringMapBool() (map[string]bool, error) {
 	return cast.ToStringMapBoolE(a.v)
 }
 
 // StringMapInt converts the value to map[string]int, returning an error on failure.
-func (a AnyValueE) StringMapInt() (map[string]int, error) {
+func (a *anyValueE) StringMapInt() (map[string]int, error) {
 	return cast.ToStringMapIntE(a.v)
 }
 
 // StringMapInt64 converts the value to map[string]int64, returning an error on failure.
-func (a AnyValueE) StringMapInt64() (map[string]int64, error) {
+func (a *anyValueE) StringMapInt64() (map[string]int64, error) {
 	return cast.ToStringMapInt64E(a.v)
 }

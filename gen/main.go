@@ -81,7 +81,7 @@ import (
 )
 {{range .}}
 // {{.MethodName}} converts the value to {{.GoType}}, returning the zero value on error.
-func (a AnyValue) {{.MethodName}}() {{.GoType}} {
+func (a *anyValue) {{.MethodName}}() {{.GoType}} {
 	v, _ := {{.CastFuncE}}(a.v)
 	return v
 }
@@ -100,7 +100,7 @@ import (
 )
 {{range .}}
 // {{.MethodName}} converts the value to {{.GoType}}, returning an error on failure.
-func (a AnyValueE) {{.MethodName}}() ({{.GoType}}, error) {
+func (a *anyValueE) {{.MethodName}}() ({{.GoType}}, error) {
 	return {{.CastFuncE}}(a.v)
 }
 {{end}}`
@@ -118,7 +118,7 @@ import (
 )
 {{range .}}
 // {{.MethodName}} converts the value to *{{.GoType}}, returning nil on error.
-func (a AnyPointer) {{.MethodName}}() *{{.GoType}} {
+func (a *anyPointer) {{.MethodName}}() *{{.GoType}} {
 	v, err := {{.CastFuncE}}(a.v)
 	if err != nil {
 		return nil
@@ -140,7 +140,7 @@ import (
 )
 {{range .}}
 // {{.MethodName}} converts the value to *{{.GoType}}, returning (nil, error) on failure.
-func (a AnyPointerE) {{.MethodName}}() (*{{.GoType}}, error) {
+func (a *anyPointerE) {{.MethodName}}() (*{{.GoType}}, error) {
 	v, err := {{.CastFuncE}}(a.v)
 	if err != nil {
 		return nil, err
